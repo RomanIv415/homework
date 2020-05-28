@@ -1,0 +1,97 @@
+body{
+	padding: 0;
+	margin: 0;
+	background: url(../img/fon.jpg) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.container{
+	max-width: 400px;
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+}
+.window{
+	height: 300px;
+	width: 400px;
+	background-color: #fff;
+	position: absolute;
+	top: calc(50% - 150px);
+	position: relative;
+}
+header{
+	background-image: url(../img/header.jpg);
+	width: 400px;
+	height: 63px;
+}
+.inner-container{
+	box-sizing: border-box;
+	max-width: 356px;
+	width: 100%;
+	height: 100%;
+	margin-left: 21px;
+}
+.login_form{
+	display: inline;
+	line-height: 100%;
+	font-family: 'Inria Sans', sans-serif;
+	color: white;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, .25)
+
+}
+header > .inner-container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.exit:before{
+	font-family: "fontello";
+	content: '\e800';
+	color: white;
+	display: block;
+	top: 0;
+	left: 0;
+}
+.name_password{
+	width: 100%;
+	height: 50px;
+	box-sizing: border-box;
+	margin-top: 23px;
+	border: 1px solid #dfdfdf;
+	padding-left: 20px;
+}
+.name_password:focus{
+	border: 1px solid #aaa;
+	outline: none;
+	outline-offset: 0;
+}
+.name{
+	background-image: url(../img/User.png);
+    background-repeat: no-repeat;
+    background-position: 97%;
+}
+.password{
+	background-image: url(../img/Locked.png);
+    background-repeat: no-repeat;
+    background-position: 97%;
+}
+button{
+	margin-top: 20px;
+	width: 100px;
+	height: 40px;
+	background-image: url(../img/button.png);
+	border: none;
+	font-family: 'Inria Sans', sans-serif;
+	color: #fff;
+	outline: none;
+}
+button:active{
+	box-shadow: 0 0 5px rgba(0, 0, 0, .6)
+}
+a{
+	text-decoration: none;
+	font-family: 'Inria Sans', sans-serif;
+	color: #999;
+	font-size: 12px;
+	margin-left: 30px;
+}

@@ -1,0 +1,540 @@
+		/* Общее */
+html{
+	box-sizing: border-box;
+}
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #e2e2e2;
+	font-size: 24px;
+}
+@font-face{
+	font-family: "Clip";
+	src: url(../font/Clip.ttf);
+}
+.container{
+	margin: 0 auto;
+	max-width: 1200px;
+	height: 100vh;
+	background-color: #fff;
+	box-shadow: rgba(0, 0, 0, .2) 0 0 20px;
+}
+.menu{
+	background-color: #0088ff;
+}
+ul{
+	list-style: none;
+	padding:0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+}
+               /* Home */
+.menu > ul{
+	text-align: center;
+}
+.menu > ul > li{
+	display: inline-block;
+	padding: 20px 25px;;
+}
+.menu > ul > .point_1:hover{
+	background-color: rgba(0, 0, 0, .2);
+
+}
+.point_1 a{
+	color: white;
+	font-family: 'Lato', sans-serif;
+	position: relative;
+}
+.point_1 ul{
+	background-color: #0088ff;
+}
+.menu > ul > .point_1 >	a:after{
+	content: "";
+	height: 3px;
+ 	width: 100%;
+ 	background-color: white;
+ 	top: 60%;
+	left: 0;
+	display: block;
+	opacity: 0;
+	transition: .3s;
+}
+.menu > ul > .point_1 >	a:after{
+	content: '\e801';
+	font-family: "fontello";
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+
+}
+.menu > ul > .point_1:hover > a.p_1:after{
+	opacity: 1;
+}
+            /* Home menu*/
+.menu > ul > .point_1{
+	position: relative;
+}
+.menu > ul > .point_1 > ul{
+	position: absolute;
+	max-width: 100em;
+	left: 0%;
+	top: 100%;
+	opacity: 0;
+	z-index: -1;
+	transform: scale(1.5, 1.5);
+	transition: 1s;
+}
+.menu > ul > .point_1:hover > .point_1_ul{
+	transform: scale(1, 1);
+	opacity: 1;
+	z-index: 1;
+}
+.menu > ul > .point_1 > ul > li{
+	padding: 20px 25px;
+	position: relative;
+}
+.menu > ul > .point_1 > ul > li:hover{
+	background-color: rgba(0, 0, 0, .2);
+}
+.menu > ul > .point_1 > ul > li > a:after{
+	content: "";
+	height: 3px;
+ 	width: 100%;
+ 	background-color: white;
+ 	top: 60%;
+	left: 0;
+	display: block;
+	opacity: 0;
+	transition: .3s;
+}
+
+.menu > ul > .point_1 > ul > li:hover > a:after{
+	opacity: 1;
+}
+			/* Home1 menu */
+.point_1_2_ul{
+	position: absolute;
+	max-width: 100em;
+	left: 100%;
+	top: 0%;
+	display: none;
+}
+.menu > ul > .point_1 > ul > li:hover > .point_1_2_ul{
+	display: block;
+	z-index: 2;
+}
+.point_1_2_ul > li{
+	padding: 20px 25px;
+}
+.point_1_2_ul > li > a:after{
+	content: "";
+	height: 3px;
+ 	width: 100%;
+ 	background-color: white;
+ 	top: 60%;
+	left: 0;
+	display: block;
+	opacity: 0;
+	transition: .3s;
+}
+.point_1_2_ul > li:hover > a:after{
+	opacity: 1;
+}
+			/* About */
+.point_2{
+	position: relative;
+}
+.point_2 > a{
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+.point_2 > a:after{
+	content: '\e801';
+	font-family: "fontello";
+	display: block;
+	position: absolute;
+	right: 6px;
+	top: 26px;
+	transition: 250ms cubic-bezier(.29,.6,.8,.55);
+	transform-origin: 50% 50%;
+}
+.point_2 > a:hover:after{
+	transform: scaleY(-1)
+}
+.point_2 > ul{
+	position: absolute;
+	max-width: 100em;
+	background-color: #0088ff;
+	left: 0%;
+	top: 100%;
+	opacity: 0;
+	z-index: -1;
+	transform: translateY(-272px);
+	transition: .4s cubic-bezier(1,.14,.53,.95)
+}
+.point_2:hover > ul{
+	opacity: 1;
+	z-index: 1;
+	transform: translateY(0px);
+}
+.point_2 > ul > li{
+	padding: 20px 25px;
+}
+.point_2 > ul > li:hover{
+	outline: 2px solid #fff;
+	outline-offset: -6px;
+}
+.point_2 > ul > li > a{
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+			/* Servises */
+.point_3{
+	position: relative;
+	padding: 20px 22px;
+}
+.point_3 > a{
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+}
+.point_3 > a:before{
+	content: "";
+	width: 2px;
+	height: 100%;
+	left: 0px;
+	top: 0;
+	display: block;
+	background-color: #fff;
+	position: absolute;
+	transform-origin: left top;
+	transform: rotate(-90deg);
+	transition: .4s;
+	opacity: 0;
+	z-index: -1;
+}
+.point_3 > a:after{
+	content: "";
+	width: 2px;
+	height: 100%;
+	right: 0px;
+	top: 0;
+	background-color: #fff;
+	position: absolute;
+	transform-origin: left top;
+	transform: rotate(90deg);
+	transition: .4s;
+	opacity: 0;
+	z-index: -1;
+}
+.point_3:hover > a:before{
+	opacity: 1;
+	z-index: 1;
+	transform: rotate(0);
+}
+.point_3:hover > a:after{
+	opacity: 1;
+	z-index: 1;
+	transform: rotate(0);
+}
+.point_3 > ul{
+	position: absolute;
+	max-width: 100em;
+	left: 0;
+	top: 100%;
+	display: block;
+	background-color: #0088ff;
+	opacity: 0;
+	z-index: 0;
+	transform: scaleX(0);
+	transition: .4s;
+}
+.point_3:hover > ul{
+	opacity: 1;
+	z-index: 1;
+	transform: scaleX(1);
+}
+.point_3 > ul > li{
+	padding: 20px 25px;
+	position: relative;
+}
+.point_3 > ul > li > a{
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+}
+.point_3 > ul > li > a:before{
+	content: "";
+	width: 2px;
+	height: 100%;
+	left: 3px;
+	top: 0;
+	display: block;
+	background-color: #fff;
+	position: absolute;
+	opacity: 0;
+	z-index: 0;
+}
+.point_3 > ul > li > a:after{
+	content: "";
+	width: 2px;
+	height: 100%;
+	right: 3px;
+	top: 0;
+	display: block;
+	background-color: #fff;
+	position: absolute;
+	opacity: 0;
+	z-index: 0;
+}
+.point_3 > ul > li:hover > a:before{
+	opacity: 1;
+	z-index: 1;
+}
+.point_3 > ul > li:hover > a:after{
+	opacity: 1;
+	z-index: 1;
+}
+			/* Portfolio */
+.point_4{
+	position: relative;
+	background-color: #000;
+}
+.point_4 > a{
+	font-family: "Clip";
+	font-size: 23px;
+	color: white;
+}
+.point_4:hover > a{
+	text-shadow: 5px 5px 20px white;
+}	
+.point_4 > a:before{
+	content: "";
+	display: block;
+	height: 3px;
+	width: 100%;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	bottom: 20%;
+}
+.point_4 > a:after{
+	content: "";
+	display: block;
+	height: 3px;
+	width: 100%;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 20%;
+}
+.point_4:hover > a:before{
+	box-shadow: #fff 0 0 7px;
+}
+.point_4:hover > a:after{
+	box-shadow: #fff 0 0 7px;
+}
+.point_4 > ul{
+	position: absolute;
+	max-width: 100em;
+	display: block;
+	left: 0;
+	top: 100%;
+	z-index: 0;
+	opacity: 0;
+}
+.point_4:hover > ul{
+	z-index: 1;
+	opacity: 1;
+}
+.point_4 > ul > li{
+	position: relative;
+	padding: 20px 25px;
+	background-color: #000;
+	display: block;
+}
+.point_4 > ul > li > a{
+	font-family: "Clip";
+}
+.point_4 > ul > li > a:before{
+	content: "";
+	display: block;
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 20%;
+}
+.point_4 > ul > li > a:after{
+	content: "";
+	display: block;
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 20%;
+}
+.li_red, .li_green{
+	transform: translateX(153px);
+}
+.li_blue, .li_yellow{
+	transform: translateX(-153px);
+}
+.li_red, .li_blue, .li_green, .li_yellow{
+	transition: 1s;
+	z-index: -1;
+}
+.point_4:hover > ul > .li_red{
+	transform: translateX(0);
+	display: block;
+}
+.point_4:hover .li_blue{
+	transform: translateX(0);
+	display: block;
+}
+.point_4:hover .li_green{
+	transform: translateX(0);
+	display: block;
+}
+.point_4:hover .li_yellow{
+	transform: translateX(0);
+	display: block;
+}
+.red{
+	color: #F70035;
+}
+.red:before{
+	background-color: #F70035;
+}
+.red:after{
+	background-color: #F70035;
+}
+.point_4 > ul > li:hover > .red:before{
+	box-shadow: #F70035 0 0 7px;
+}
+.point_4 > ul > li:hover > .red:after{
+	box-shadow: #F70035 0 0 7px;
+}
+
+.blue{
+	color: #0036F9;
+}
+.blue:before{
+	background-color: #0036F9;
+}
+.blue:after{
+	background-color: #0036F9;
+}
+.point_4 > ul > li:hover > .blue:before{
+	box-shadow: #0036F9 0 0 7px;
+}
+.point_4 > ul > li:hover > .blue:after{
+	box-shadow: #0036F9 0 0 7px;
+}
+.green{
+	color: #11F919;
+}
+.green:before{
+	background-color: #11F919;
+}
+.green:after{
+	background-color: #11F919;
+}
+.point_4 > ul > li:hover > .green:before{
+	box-shadow: #11F919 0 0 7px;
+}
+.point_4 > ul > li:hover > .green:after{
+	box-shadow: #11F919 0 0 7px;
+}
+
+.yellow{
+	color: #E8F400;
+}
+.yellow:before{
+	background-color: #E8F400;
+}
+.yellow:after{
+	background-color: #E8F400;
+}
+.point_4 > ul > li:hover > .yellow:before{
+	box-shadow: #E8F400 0 0 7px;
+}
+.point_4 > ul > li:hover > .yellow:after{
+	box-shadow: #E8F400 0 0 7px;
+}
+			/* Contacts */
+.point_5{
+	position: relative;
+}
+.point_5 > a{
+	font-family: 'Roboto Slab', serif;
+	color: white;
+}
+.point_5 > ul{
+	position: absolute;
+	max-width: 100em;
+	left: 0;
+	top: 100%;
+	display: block;
+	background-color: #0088ff;
+	opacity: 0;
+	z-index: -1;
+}
+.point_5:hover{
+	background-color: rgba(0, 0, 0 , .2);
+}
+.point_5:hover > ul{
+	opacity: 1;
+	z-index: 1;
+}
+.point_5 > ul > li{
+	padding: 20px 25px;
+	position: relative;
+}
+.point_5 > ul > li:hover{
+	background-color: rgba(0, 0, 0, .2);
+}
+.point_5 > ul > li > a{
+	font-family: 'Roboto Slab', serif;;
+	color: #fff;
+}
+.point_5_1:before{
+	content: '\e800';
+	font-family: "fontello";
+	display: block;
+	position: absolute;
+	top: 36%;
+	left: 4px;
+	color: white;
+	font-size: 23px;
+}
+.point_5_2:before{
+	content: '\f189';
+	font-family: "fontello";
+	display: block;
+	position: absolute;
+	top: 33%;
+	left: 17px;
+	color: white;
+	font-size: 23px;
+}
+.point_5_3:before{
+	content: '\f16d';
+	font-family: "fontello";
+	display: block;
+	position: absolute;
+	top: 33%;
+	left: 25px;
+	color: white;
+	font-size: 23px;
+}
+.point_5_4:before{
+	content: '\f16a';
+	font-family: "fontello";
+	display: block;
+	position: absolute;
+	top: 35%;
+	left: 32px;
+	color: white;
+	font-size: 23px;
+}

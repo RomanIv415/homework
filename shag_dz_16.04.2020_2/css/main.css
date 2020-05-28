@@ -1,0 +1,184 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #f7f7f7;
+}
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 100vh;
+}
+.reg-form{
+	color: #324357;
+	font-size: 46px;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 26px;
+}
+.reg{
+	font-weight: 900;
+}
+.form{
+	font-weight: 300;
+}
+.window{
+	width: 100%;
+	height: 1021px;
+	background-color: #32425b;
+	display: flex;
+}
+.logo{
+	flex-basis: 50%;
+	background: url(../img/logo.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.register{
+	font-size: 33px;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	letter-spacing: 13px;
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 0;
+}
+.menu{
+	flex-basis: 50%;
+	position: relative;
+}
+.its{
+	color: #1ad5b6;
+	font-size: 19px;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin-top: 16px;
+	margin-bottom: 0px;
+}
+.inner-container{
+	width: 470px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.input{
+	width: 100%;
+	height: 60px;
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid #8da2b3;
+	outline: none;
+	position: absolute;
+	padding-left: 15px;
+	padding-top: 7px;
+	left: 0;
+	color: #8da2b3;
+	font-family: 'Baloo Bhaina 2', cursive;
+	font-weight: 400;
+	font-size: 23px;
+}
+.input::-webkit-input-placeholder { 
+	color: #8da2b3;
+}
+#name{
+	top: 52px;
+}
+#username{
+	top: 180px;
+}
+#email{
+	top: 308px;
+}
+#password{
+	top: 436px;
+}
+#confirm_password{
+	top: 564px;
+}
+.label{
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 13px;
+	letter-spacing: 2px;
+	margin-top: 45px;
+	position: absolute;
+	left: 15px;
+}
+#name_label{
+	top: -15px;
+}
+#username_label{
+	top: 110px;
+}
+#email_label{
+	top: 240px;
+}
+#password_label{
+	top: 365px;
+}
+#confirm_password_label{
+	top: 495px;
+}
+#checkbox{
+	position: absolute;
+	top: 700px;
+	display: none;
+}
+#check_label{
+	width: 26px;
+	height: 26px;
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, .0);
+	border: 2px solid #8da2b3;
+	position: absolute;
+	top: 684px;
+}
+#checkbox:checked + #check_label{
+	background-image: url(../img/check.png); 
+}
+#check_label_text{
+	position: absolute;
+	left: 44px;
+	top: 684px;
+	font-family: 'Baloo Bhaina 2', cursive;
+	color: #fff;
+	font-size: 14px;
+	line-height: 15px;
+}
+button{
+	position: absolute;
+	top: 740px;
+	width: 100%;
+	height: 60px;
+	background-color: #1fd6ba;
+	color: #fff;
+	font-family:'Roboto', sans-serif;
+	font-size: 16px;
+	letter-spacing: 4px;
+	border: none;
+	outline: none;
+}
+a{
+	position: absolute;
+	text-decoration: none;
+	color: #9ab0be;
+	top: 815px;
+	left: 31%;
+	font-family: 'Baloo Bhaina 2', cursive;
+	letter-spacing: 1px;
+}
+a:after{
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	top: 0;
+	left: 0px;
+	background-color: #9ab0be;
+}

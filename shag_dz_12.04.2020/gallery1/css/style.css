@@ -1,0 +1,15 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: url(../img/fon.jpg) no-repeat;
+}
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.photo{
+	border: 3px solid #f3cba0;
+}
+.block{
+	width: 288px;
+}

@@ -1,0 +1,64 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.grid-container{
+    max-width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "o1 o1 i3 i4"
+                         "o1 o1 i7 i8"
+                         "i9 o2 o2 i12"
+                         "i13 o2 o2 i16"
+                         "i17 i18 i19 i20";
+    grid-gap: 5px;
+}
+.grid-container > div{
+    background-color: #9913f3;
+}
+.o1{
+    grid-area: o1;
+}
+.o2{
+    grid-area: o2;
+}
+.i3{
+    grid-area: i3;
+}
+.i4{
+    grid-area: i4;
+}
+.i7{
+    grid-area: i7;
+}
+.i8{
+    grid-area: i8;
+}
+.i9{
+    grid-area: i9;
+}
+.i12{
+    grid-area: i12;
+}
+.i13{
+    grid-area: i13;
+}
+.i16{
+    grid-area: i16;
+}
+.i17{
+    grid-area: i17;
+}
+.i18{
+    grid-area: i18;
+}
+.i19{
+    grid-area: i19;
+}
+.i20{
+    grid-area: i20;
+}
