@@ -1,0 +1,45 @@
+body {
+    background-color: #e0e0e0;
+}
+.container{
+    margin: 0 auto;
+    max-width: 256px;
+    box-shadow: rgba(0,0,0,.25) 0 3px 10px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+.block{
+    width: 256px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.block:first-child{
+    width: 256px;
+    height: 256px;
+    background-image: url('img/face.png');
+    position: relative;
+}
+body > div > div > div > div{
+    width: 256px;
+    height: 256px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.city{
+    width: 256px;
+    height: 20px;
+    background-color: #fff;
+}
+
+#clock-hour, #clock-hour2, #clock-hour3, #clock-hour4, #clock-hour5, #clock-hour6 {
+    background-image: url('img/hour.png');
+}
+#clock-minute, #clock-minute2, #clock-minute3, #clock-minute4, #clock-minute5, #clock-minute6 {
+    background-image: url('img/minute.png');
+}
+#clock-second, #clock-second2, #clock-second3, #clock-second4, #clock-second5, #clock-second6 {
+    background-image: url('img/second.png');
+}

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+body {
+    margin: 0;
+    background-color: #213058;
+    color: #a664db;
+    font-family: sans-serif;
+}
+
+#countdown {
+    width: 700px;
+    height: 200px;
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.2);
+    border-radius: 10px;
+    display: flex;
+    box-shadow: #a664db63 0 0 15px;
+}
+#countdown>div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.15);
+}
+#countdown>div>div {
+    font-family: 'Aldrich', sans-serif;
+    text-shadow: #d097ffa4 0 0 8px;
+    color: #a56ed1;
+    font-size: 80px;
+    letter-spacing: 4px;
+    width: 116px;
+    text-align: center;
+}
+
+#countdown>div>p {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: -100%;
+    /* background-color: #d097ff22; */
+    background-image: linear-gradient(to bottom, #d097ff22 0%, #d097ff5c 100%);
+}

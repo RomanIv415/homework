@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let now = new Date();
+        let nextBrDay = new Date(2021, 0, 4, 22, 40, 0, 0);
+        // Нахождение последней цифры числа
+        function ending (number) {
+            let numEnd = number - (Math.floor(number / 10) * 10);
+            return numEnd;
+        }
+        // Нахождение количества дней
+        let time1 = nextBrDay - now;
+        let days = Math.floor(time1 / 86400000);
+        // Нахождение количества часов
+        let time2 = time1 % 86400000;
+        let hours = Math.floor(time2 / 3600000);
+        // Нахождение количества минут
+        let time3 = time2 % 3600000;
+        let minutes = Math.floor(time3 / 60000);
+        // Нахождение количества минут
+        let time4 = time3 % 60000;
+        let seconds = Math.floor(time4 / 1000);
+        // Массивы
+        let singular = [" день", " час", " минута", " секунда"];
+        let plural24 = [" дня", " часа", " минуты", " секунды"];
+        let plural50 = [" дней", " часов", " минут", " секунд"];
+        let variables = [days, hours, minutes, seconds];
+
+        // Выбор окончания слова по последней цифре числа (точно так-же для часов, минит и секунд)
+        for (i=0; i<4; i++){
+            if (ending(variables[i]) == 1) {
+                variables[i] = variables[i] + singular[i];
+            }
+            else if (ending(variables[i]) < 5 && ending(variables[i]) > 1) {
+                variables[i] = variables[i] + plural24[i];
+            }
+            else {
+                variables[i] = variables[i] + plural50[i];
+            }
+        }
+        document.write (`<h2>До моего дня рождения осталось: ${days}, ${hours}, ${minutes} и ${seconds}!</h2>`);
+    </script>
+</body>
+</html>
