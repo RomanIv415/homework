@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .switcher-checkbox {
+            display: none;
+        }
+        .switcher-checkbox + .switcher {
+            display: block;
+            width: 90px;
+            height: 50px;
+            background-color: #b1b1b1;;
+            border-radius: 50px;
+            position: relative;
+            transition: 400ms ease;
+        }
+        .switcher-checkbox + .switcher > .switcher-span {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #8d8d8d;
+            border-radius: 50px;
+            top: 0;
+            left: 0;
+            transition: 400ms ease;
+        }
+        .switcher-checkbox:checked + .switcher {
+            background-color: #5ec781;
+        }
+        .switcher-checkbox:checked + .switcher > .switcher-span {
+            background-color: #13af2d;
+            left: 40px;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="checkbox" id="switcher-1" class="switcher-checkbox">
+    <label class="switcher" for="switcher-1">
+        <div class="switcher-span"></div>
+    </label>
+
+</body>
+</html>

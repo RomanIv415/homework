@@ -1,14 +1,9 @@
 body{
 	position: relative;
-
-}
-.white {
-	background: url(../img/fon.jpg) no-repeat;
 	padding: 0;
 	margin: 0;
-	-webkit-background-size: cover;
-	background-size: cover;
 }
+
 .container{
 	max-width: 400px;
 	width: 100%;
@@ -18,13 +13,11 @@ body{
 .container .window{
 	height: 300px;
 	width: 400px;
-	background-color: #fff;
 	position: absolute;
 	top: calc(50% - 150px);
 	position: relative;
 }
 .container header{
-	background-image: url(../img/header.jpg);
 	width: 400px;
 	height: 63px;
 }
@@ -83,7 +76,6 @@ body{
 	margin-top: 20px;
 	width: 100px;
 	height: 40px;
-	background-image: url(../img/button.png);
 	border: none;
 	font-family: 'Inria Sans', sans-serif;
 	color: #fff;
@@ -99,6 +91,42 @@ body{
 	font-size: 12px;
 	margin-left: 30px;
 }
+/*White*/
+.white {
+	background: url('../img/fon.jpg') no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.white > .container .window{
+	background-color: #fff;
+}
+.white > .container header{
+	background-image: url('../img/header.jpg');
+}
+.white > .container button{
+	background-image: url('../img/button.png');
+}
+/*Night*/
+.night {
+	background: url('../img/fonnight.jpg') no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.night > .container .window{
+	background-color: rgba(255, 255, 255, .43);
+}
+.night > .container header{
+	background-image: none;
+	background-color: rgba(7, 7, 31, 0.644);
+}
+.night > .container button{
+	background-image: none;
+	background-color: rgba(7, 7, 31, 0.644);
+}
+.night .lup{
+	color: #fff;
+}
+/*Swicher*/
 .switcher-checkbox {
 	display: none;
 }
