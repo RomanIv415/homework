@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f1f2f3;
+        }
+        .container {
+            max-width: 800px;
+            margin: 15px auto;
+        }
+
+        #my-canvas {
+            background-color: #fff;
+            box-shadow: rgba(0,0,0,.3) 0 5px 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <canvas id="my-canvas" width="800" height="500"></canvas>
+    </div>
+
+    <script>
+
+        const canvas = document.querySelector('#my-canvas')
+        const ctx = canvas.getContext('2d')
+
+        function drawEllipse(ctx, x, y, a, b) {
+        // Запоминаем положение системы координат (CК) и масштаб
+        ctx.save();
+        ctx.beginPath();
+        
+        // Переносим СК в центр будущего эллипса
+        ctx.translate(x, y);
+        
+        /*
+        * Масштабируем по х.
+        * Теперь нарисованная окружность вытянется в a / b раз
+        * и станет эллипсом
+        */
+        
+        ctx.scale(a / b, 1);
+        
+        // Рисуем окружность, которая благодаря масштабированию станет эллипсом
+        ctx.arc(0, 0, b, 0, Math.PI * 2, true);
+        
+        // Восстанавливаем СК и масштаб
+        ctx.restore();
+        
+        ctx.closePath();
+        ctx.strokeStyle = "#000"
+        ctx.fillStyle = "#000"
+        ctx.stroke();
+        ctx.fill();
+        }
+
+        ctx.beginPath();
+        ctx.fillStyle = "#fad700";
+        ctx.arc(canvas.width / 2, canvas.height  / 2, canvas.height*.45, 0, 2 * Math.PI);
+        ctx.fill();
+
+        drawEllipse(ctx, 325, 165, 25, 62);
+        drawEllipse(ctx, 465, 165, 25, 62);
+
+        ctx.beginPath();
+        ctx.arc(400, 270, 130, 0.23, 2.87);
+        ctx.lineWidth = 19;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(290, 300);
+        ctx.quadraticCurveTo(270, 308, 260, 315);
+        ctx.lineWidth = "19";
+        ctx.lineCap = "round";
+        ctx.stroke()
+
+        ctx.beginPath();
+        ctx.moveTo(510, 300);
+        ctx.quadraticCurveTo(530, 308, 540, 315);
+        ctx.lineWidth = "19";
+        ctx.lineCap = "round";
+        ctx.stroke()
+
+
+    </script>
+
+</body>
+</html>
