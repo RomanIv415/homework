@@ -1,0 +1,11 @@
+body{
+    background-color: #ddd;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+#canv{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, .5) 0 0 10px;
+}
